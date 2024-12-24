@@ -1,0 +1,22 @@
+
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://root:28062003@localhost:3306/graduationproject"
+}
+generator client {
+  provider = "prisma-client-js"
+}
+model AccountType {
+  accountTypeId Int    @id @default(autoincrement())
+  accountTypeName String
+  account       Account[]
+}
+model Account {
+  accountId     Int      @id @default(autoincrement())
+  username      String
+  password      String
+  accountTypeId Int
+  Salt          String
+  accountType   AccountType @relation(fields: [accountTypeId], references: [accountTypeId])
+}
