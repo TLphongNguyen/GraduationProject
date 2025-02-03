@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
-import { authenticate } from '../reducers/slice/authSlice'
+import { authenticate, setAuthentication, setAccount } from '../reducers/slice/authSlice'
 import { useAppDispatch } from '../redux/store'
 
 type Props = {}
@@ -13,8 +13,12 @@ const Login = ({}: Props) => {
   const [searchParams] = useSearchParams()
   const redirectRouter = searchParams.get('return') || '/'
   const login = async () => {
-    await dispatch(authenticate())
-    navigate(redirectRouter)
+    const result = await dispatch(authenticate())
+    if (authenticate.fulfilled.match(result)) {
+      dispatch(setAuthentication(true))
+      dispatch(setAccount(result.payload))
+      navigate(redirectRouter)
+    }
   }
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>

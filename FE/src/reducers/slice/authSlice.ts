@@ -6,9 +6,11 @@ import { defaultAuth, IAuth } from '../../models/reducers/auth.model'
 const initialState: IAuth = defaultAuth
 
 export const authenticate = createAsyncThunk('auth/login', async () => {
-  return new Promise<any>((_resolve, reject) => {
+  return new Promise<any>((resolve) => {
     setTimeout(() => {
-      reject(123)
+      resolve({
+        authorities: [AUTHORITIES.SYSTEM_ADMIN],
+      })
     }, 3000)
   })
 })
@@ -19,6 +21,16 @@ const authSlice = createSlice({
   reducers: {
     setAuthentication(state, action: PayloadAction<boolean>) {
       state.isAuthenticated = action.payload
+    },
+    setAccount(state, action: PayloadAction<any>) {
+      state.account = action.payload
+      localStorage.setItem('account', JSON.stringify(action.payload))
+    },
+    logout(state) {
+      state.isAuthenticated = false
+      state.account = { authorities: [''] }
+      localStorage.removeItem('isAuthenticated')
+      localStorage.removeItem('account')
     },
   },
   extraReducers(builder) {
@@ -42,5 +54,5 @@ const authSlice = createSlice({
   },
 })
 
-export const { setAuthentication } = authSlice.actions
+export const { setAuthentication, setAccount, logout } = authSlice.actions
 export default authSlice.reducer
