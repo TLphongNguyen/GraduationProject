@@ -12,7 +12,6 @@ const Router = () => {
     <ErrorBoundaryRoutes>
       <Route
         index={true}
-        path="/*"
         element={
           <PrivateRouter hasAnyAuthorities={[AUTHORITIES.USER]}>
             <Home />

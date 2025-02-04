@@ -60,9 +60,7 @@ const HeaderCpn = ({}: Props) => {
 								</li>
 							))}
 						</ul>
-						<div className="address">
-							
-						</div>
+						<div className="address"/>
 					</div>
 				</div>
 			</div>
