@@ -23,3 +23,6 @@ button {
 .ant-modal .ant-modal-content {
 	padding: 0;
 }
+.no-scrollbar::-webkit-scrollbar {
+	display: none;
+}

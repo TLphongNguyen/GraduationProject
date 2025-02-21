@@ -12,35 +12,35 @@ const HeaderBottom = ({}: Props) => {
 						</div>
 						<p className="text-[#27272A] text-[12px] font-[500]">100% hàng thật</p>
 					</li>
-					<div className="w-[1px] h-[20px] bg-[#EBEBF0]"></div>
+					<div className="w-[1px] h-[20px] bg-[#EBEBF0]"/>
 					<li className="flex items-center px-[6px] gap-[4px] cursor-pointer">
 						<div className="w-[20px] h-[20px]">
 							<img className="w-full h-full object-contain" src="/img/carIcon.png" alt="" />
 						</div>
 						<p className="text-[#27272A] text-[12px] font-[500]">Free ship mọi nơi</p>
 					</li>
-					<div className="w-[1px] h-[20px] bg-[#EBEBF0]"></div>
+					<div className="w-[1px] h-[20px] bg-[#EBEBF0]"/>
 					<li className="flex items-center px-[6px] gap-[4px] cursor-pointer">
 						<div className="w-[20px] h-[20px]">
 							<img className="w-full h-full object-contain" src="/img/recoinIcon.png" alt="" />
 						</div>
 						<p className="text-[#27272A] text-[12px] font-[500]">Hoàn 200% nếu hàng giả</p>
 					</li>
-					<div className="w-[1px] h-[20px] bg-[#EBEBF0]"></div>
+					<div className="w-[1px] h-[20px] bg-[#EBEBF0]"/>
 					<li className="flex items-center px-[6px] gap-[4px] cursor-pointer">
 						<div className="w-[20px] h-[20px]">
 							<img className="w-full h-full object-contain" src="/img/backIcon.png" alt="" />
 						</div>
 						<p className="text-[#27272A] text-[12px] font-[500]">30 ngày đổi trả</p>
 					</li>
-					<div className="w-[1px] h-[20px] bg-[#EBEBF0]"></div>
+					<div className="w-[1px] h-[20px] bg-[#EBEBF0]"/>
 					<li className="flex items-center px-[6px] gap-[4px] cursor-pointer">
 						<div className="w-[20px] h-[20px]">
 							<img className="w-full h-full object-contain" src="/img/car1.png" alt="" />
 						</div>
 						<p className="text-[#27272A] text-[12px] font-[500]">Giao nhanh 2h</p>
 					</li>
-					<div className="w-[1px] h-[20px] bg-[#EBEBF0]"></div>
+					<div className="w-[1px] h-[20px] bg-[#EBEBF0]"/>
 					<li className="flex items-center px-[6px] gap-[4px] cursor-pointer">
 						<div className="w-[20px] h-[20px]">
 							<img className="w-full h-full object-contain" src="/img/ticket.png" alt="" />

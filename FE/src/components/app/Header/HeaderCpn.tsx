@@ -46,9 +46,9 @@ const HeaderCpn = ({}: Props) => {
 	];
 
 	return (
-		<header className="w-full h-[--header-height]">
+		<header className="w-full ">
 			<HeaderTop />
-			<div className="container-base bg-[#fff] h-full flex items-center gap-[48px]">
+			<div className=" h-[--header-height] container-base bg-[#fff] flex items-center gap-[48px]">
 				<div className="flex flex-col min-w-[96px]">
 					<img src="/img/tiki.png" alt="" className="w-full h-[40px] object-contain justify-center" />
 					<span className="text-[14px] text-[#003ea1] font-[600] mt-2 ml-2">{t('Tốt & Nhanh')}</span>
